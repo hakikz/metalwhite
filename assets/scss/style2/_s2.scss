@@ -1,0 +1,42 @@
+.wrapper2{
+    position: relative;
+    overflow: hidden;
+    .nivoSlider{
+        margin-bottom: 0;
+    }
+    .main-content{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 9;
+
+        .corporate-av,
+        .feature-product{
+            position: relative;
+            bottom: -187px;
+            transition: 0.5s bottom ease-in-out;
+            .col-title{
+                @include col-title($white, $white);
+                color: $dgreen;
+            }
+
+            &:hover{
+                bottom: 0;
+                .col-title{
+                    @include col-title($dgreen, $dgreen);
+                    color: $white;
+                }
+            }
+        }
+    }
+    .theme-default {
+        .nivo-controlNav {
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 8;
+            width: 100%;
+        }
+    }
+}

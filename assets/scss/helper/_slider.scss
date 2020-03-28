@@ -1,0 +1,30 @@
+.slider{
+    margin-top: 20px;
+}
+
+.wings{
+    margin: 30px 0 50px;
+    .col-title{
+        @include col-title($dgreen, $dash);
+        padding: 7px 15px;
+        margin-bottom: 30px;
+    }
+    .right-col{
+        // border: 1px solid $dgreen;
+        #carousellogo{
+            .img-cus{
+                max-width: 100%;
+                margin-bottom: 4px;
+            }
+        }
+        .wing{
+            border: 1px solid $dgreen;
+            div{
+                img{
+                    padding: 0 45px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

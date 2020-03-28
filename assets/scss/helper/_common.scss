@@ -1,0 +1,39 @@
+body{
+    font-family: $rale;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: $play;
+}
+
+.btn-green{
+    background-color: $dgreen;
+    color: $white;
+}
+
+.partner{
+    margin: 50px 0 30px;
+    .col-title{
+        @include col-title($dgreen, $dash);
+        margin-bottom: 30px;
+        h2{
+            padding: 0 15px;
+        }
+    }
+    .logo{
+        border: 1px solid $dgreen;
+        .partner-logo{
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1199px){
+    .container{
+        max-width: 1240px;
+    }
+}

@@ -1,0 +1,158 @@
+.header{
+    // background-color: $dgreen;
+    position: relative;
+    .navbar{
+        padding: 0;
+
+        #navbarSupportedContent{
+            justify-content: flex-end;
+        }
+
+        .navbar-brand{
+            background-color: $white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 15px;
+            img{
+                max-width: 200px;
+            }
+            &:after{
+                content: "";
+                width: 0;
+                height: 0;
+                border-top: 80px solid $dgreen;
+                border-right: 80px solid transparent;
+                position: absolute;
+                top: 20px;
+                right: -84px;
+                display: none;
+            }
+        }
+
+        ul{
+            display: flex;
+            li{
+                padding: 0 !important;
+                position: relative;
+                a{
+                    padding: 6px 15px;
+                    color: $dgreen;
+                    font-family: $play;
+                    font-weight: $reg;
+                    font-size: $font - 1px;
+                    border-right: 1px solid $dgreen;
+                    transition: 0.5s all ease-in-out;
+                    text-decoration: none;
+                    display: inline-block;
+
+                    &:hover{
+                        background-color: $dgreen;
+                        color: $white;
+                    }
+                }
+
+                &.active{
+                    a{
+                        background-color: $dgreen;
+                        color: $white;
+                    }
+                }
+
+                &:last-child{
+                    a{
+                        border-right: 0px solid;
+                    }   
+                }
+
+                &.has-child-1{
+                    .sub-nav-1{
+                        padding: 0;
+                        list-style: none;
+                        position: absolute;
+                        display: block;
+                        width: 100%;
+                        min-width: 200px;
+                        top: 33px;
+                        left: -1px;
+                        z-index: 9;
+                        opacity: 0;
+                        visibility: hidden;
+                        li{
+                            a{
+                                display: block;
+                                border-right: none;
+                                border-bottom: 1px solid $white;
+                                padding: 8px 15px;
+                                font-size: $font - 2px;
+                                background-color: $dgreen;
+                                color: $white;
+
+                                &:hover{
+                                    background-color: $dash;
+                                    color: $white;
+                                }
+                            }
+                            &:last-child{
+                                a{
+                                    border-bottom: 0px solid;
+                                }   
+                            }
+                            &.has-child-2{
+                                @include inner_ul;
+                                li{
+                                    a{
+                                        background-color: $dgreen !important;
+                                    }
+                                }
+                                .sub-nav-2{
+                                    li{
+                                        &.has-child-3{
+                                            @include inner_ul;
+                                            .sub-nav-3{
+                                                li{
+                                                    a{
+                                                        background-color: $dgreen !important;
+                                                    }
+                                                    &:hover{
+                                                        a{
+                                                            background-color: $dash !important;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        &:hover{
+                                            a{
+                                                background-color: $dash !important;
+                                            }
+                                        }
+                                    }
+                                } 
+                            }
+
+                            &:hover{
+                                a{
+                                    background-color: $dash;
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        .sub-nav-1{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+                &:hover{
+                    a{
+                        background-color: $dgreen;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

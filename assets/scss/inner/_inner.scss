@@ -1,0 +1,138 @@
+.inner{
+    @include corporate_av;
+
+    .col-title{
+        @include col-title($dgreen, $dash);
+        padding: 7px 22px;
+    }
+
+    .content{
+        margin: 30px 0;
+
+        .left-title{
+            margin-bottom: 30px;
+        }
+
+        .office-block{
+            border: 1px solid $dgreen;
+            margin-bottom: 30px;
+
+            ul{
+                list-style: none;
+                padding: 20px 0 10px 10px;
+
+                li{
+                    display: block;
+                    margin-bottom: 20px;
+                    h4{
+                        font-size: $font + 2px;
+                        color: $dgreen;
+                    }
+                    &:last-child{
+                     
+                            margin-bottom: 0;
+                      
+                    }
+                }
+
+            }
+        }
+    }
+
+    .inner-menu-block{
+        ul{
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            border: 1px solid $dgreen;
+            li{
+                border-bottom: 1px solid $dgreen;
+                a{
+                    padding: 10px 5px;
+                    display: block;
+                    color: $dgreen;
+                    text-decoration: none;
+
+                    &:hover{
+                        background-color: $lgreen;
+                        color: $dgreen;
+                    }
+                }
+                &:last-child{
+                        border-bottom: none;
+                }
+                &.active{
+                    a{
+                        background-color: $lgreen;
+                        color: $dgreen;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-img-inner{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        &::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+        .img-logo-in{
+            position: absolute;
+            z-index: 3;
+            background-color: $white;
+            padding: 15px 30px 30px 30px;
+        }
+        .ban_img{
+            transform: scale(1);
+            transition: 1s transform ease-in-out;
+        }
+        &:hover{
+            .ban_img{
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    .hero-img{
+        overflow: hidden;
+        @include img_scale;
+    }
+
+    &.contact{
+        .contact-map,
+        .contact-form{
+            margin-top: 30px;
+        }
+
+        .contact-form{
+            margin-bottom: 50px;
+        }
+        .side-part{
+            background-color: #f4f4f4;
+            padding: 0 20px 20px 20px;
+        }
+    }
+
+    &.management{
+        .img-container{
+            text-align: center;
+            small{
+                &.title{
+                    display: block;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.top-tool{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0;
+
+    input{
+        border: 3px solid $dgreen;
+    }
+
+    ul{
+        li{
+            padding: 10px 7px;
+            a{
+                background-image: linear-gradient(to right, $dgreen , $dash);
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: background-image 0.5s ease-in-out;
+                text-decoration: none;
+
+                i{
+                    color: $white;
+                }
+
+                &:hover{
+                    background-image: linear-gradient(to right, $dash , $dgreen);
+                }
+            }
+        }
+    }
+}
