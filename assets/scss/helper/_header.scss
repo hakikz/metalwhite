@@ -9,13 +9,8 @@
         }
 
         .navbar-brand{
-            background-color: $white;
-            position: absolute;
-            top: 0;
-            left: 0;
-            padding: 15px;
             img{
-                max-width: 200px;
+                max-width: 170px;
             }
             &:after{
                 content: "";
@@ -36,15 +31,16 @@
                 padding: 0 !important;
                 position: relative;
                 a{
-                    padding: 6px 15px;
+                    padding: 28px 15px;
                     color: $dgreen;
                     font-family: $play;
                     font-weight: $reg;
-                    font-size: $font - 1px;
-                    border-right: 1px solid $dgreen;
+                    font-size: $font;
+                    // border-right: 1px solid $dgreen;
                     transition: 0.5s all ease-in-out;
                     text-decoration: none;
                     display: inline-block;
+                    text-transform: uppercase;
 
                     &:hover{
                         background-color: $dgreen;
@@ -73,8 +69,8 @@
                         display: block;
                         width: 100%;
                         min-width: 200px;
-                        top: 33px;
-                        left: -1px;
+                        top: 77px;
+                        left: 0;
                         z-index: 9;
                         opacity: 0;
                         visibility: hidden;
@@ -84,7 +80,7 @@
                                 border-right: none;
                                 border-bottom: 1px solid $white;
                                 padding: 8px 15px;
-                                font-size: $font - 2px;
+                                font-size: $font - 1px;
                                 background-color: $dgreen;
                                 color: $white;
 
